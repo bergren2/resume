@@ -4,34 +4,33 @@
   "homepage": "https://www.heymrbass.com/resume",
   "version": "0.0.1",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/bergren2/resume"
+    "type": "git",
+    "url": "https://github.com/bergren2/resume"
   },
-  "private" : "true",
-
+  "private": "true",
   "devDependencies": {
     "bower": "*",
+    "browserify": "*",
     "gulp": "*",
-    "gulp-util": "*",
-    "gulp-rimraf": "*",
     "gulp-concat": "*",
+    "gulp-connect": "*",
     "gulp-download": "*",
-    "gulp-rename": "*",
+    "gulp-gh-pages": "^0.3.4",
+    "gulp-if": "*",
+    "gulp-jshint": "*",
     "gulp-minify-css": "*",
     "gulp-minify-html": "*",
     "gulp-processhtml": "*",
-    "gulp-jshint": "*",
+    "gulp-rename": "*",
+    "gulp-rimraf": "*",
+    "gulp-streamify": "*",
     "gulp-uglify": "*",
-    "gulp-connect": "*",
+    "gulp-util": "*",
     "gulp-watch": "*",
-    "browserify": "*",
     "tiny-lr": "*",
     "vinyl-source-stream": "*",
-    "gulp-streamify": "*",
-    "watchify": "*",
-    "gulp-if": "*"
+    "watchify": "*"
   },
-
   "scripts": {
     "post-install": "node ./node_modules/bower/bin/bower install",
     "start": "node ./node_modules/gulp/bin/gulp.js",

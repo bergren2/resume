@@ -1,3 +1,6 @@
+/*jslint node: true */
+'use strict';
+
 var gulp = require('gulp')
   , gutil = require('gulp-util')
   , rimraf = require('gulp-rimraf')
@@ -14,6 +17,7 @@ var gulp = require('gulp')
   , browserify = require('browserify')
   , watchify = require('watchify')
   , gulpif = require('gulp-if')
+  , deploy = require('gulp-gh-pages')
   , paths;
 
 var watching = false;
@@ -120,3 +124,8 @@ gulp.task('watch', function () {
 
 gulp.task('default', ['connect', 'watch', 'build']);
 gulp.task('build', ['clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml']);
+
+gulp.task('deploy', function () {
+  gulp.src('./dist/**/*')
+    .pipe(deploy(options));
+});
