@@ -1,0 +1,10 @@
+{
+  "name": "resume-the-game",
+  "version": "0.0.0",
+  "authors": [
+    "Dan Bergren"
+  ],
+  "dependencies": {
+    "phaser-official": "latest"
+  }
+}
