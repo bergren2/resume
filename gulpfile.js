@@ -72,7 +72,7 @@ gulp.task('compile', ['clean'], function () {
 
   if (watching) {
     bundler = watchify(bundler);
-    bundler.on('update', bundlee)
+    bundler.on('update', bundlee);
   }
 
   return bundlee();
