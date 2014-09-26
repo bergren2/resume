@@ -1,3 +1,6 @@
+/*jslint node: true*/
+'use strict';
+
 var Preloader = function (game) {
   this.asset = null;
   this.ready = false;

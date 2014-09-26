@@ -1,3 +1,6 @@
+/*jslint node: true*/
+'use strict';
+
 var Utils = {
     containsObject: function(obj, list) {
         var i;
