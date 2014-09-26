@@ -4,7 +4,7 @@
 var gulp = require('gulp')
   , gutil = require('gulp-util')
   , rimraf = require('gulp-rimraf')
-  , concat = require('gulp-concat')
+  // , concat = require('gulp-concat')
   , rename = require('gulp-rename')
   , minifycss = require('gulp-minify-css')
   , minifyhtml = require('gulp-minify-html')
@@ -127,5 +127,5 @@ gulp.task('build', ['clean', 'copy', 'copylibs', 'compile', 'minifycss', 'proces
 
 gulp.task('deploy', function () {
   gulp.src('./dist/**/*')
-    .pipe(deploy(options));
+    .pipe(deploy());
 });
