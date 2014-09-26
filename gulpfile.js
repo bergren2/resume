@@ -126,6 +126,6 @@ gulp.task('default', ['connect', 'watch', 'build']);
 gulp.task('build', ['clean', 'copy', 'copylibs', 'compile', 'minifycss', 'processhtml', 'minifyhtml']);
 
 gulp.task('deploy', function () {
-  gulp.src('./dist/**/*')
+  gulp.src('./src/**/*')
     .pipe(deploy());
 });
