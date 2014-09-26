@@ -1,6 +1,12 @@
-# Résumé: The Game
+# R&eacute;sum&eacute;: The Game
+
+My r&acute;sum&acute; in game-form. Currently a work in progress.
 
 ## Setup
+
+This project uses [Phaser](http://phaser.io/) for the game engine and
+[gulp-gh-pages](https://github.com/rowoot/gulp-gh-pages) to deploy to GitHub
+Pages.
 
 ### Environment Prereqs
 
