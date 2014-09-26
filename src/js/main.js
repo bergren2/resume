@@ -1,12 +1,13 @@
 /*jslint node: true*/
 /*jslint browser: true*/
+/*global Phaser*/
 'use strict';
 
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'resume-the-game-game');
 
 window.Utils = require('./utils');
 window.playerState = {
-    currentLevel: 'Game'
+  currentLevel: 'Game'
 };
 
 game.state.add('Boot', require('./states/boot'));
