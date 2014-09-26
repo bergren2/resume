@@ -1,6 +1,6 @@
 # R&eacute;sum&eacute;: The Game
 
-My r&acute;sum&acute; in game-form. Currently a work in progress.
+My r&eacute;sum&eacute; in game-form. Currently a work in progress.
 
 ## Setup
 
