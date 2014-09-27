@@ -4,6 +4,8 @@
 
 var Player = function (game, x, y) {
   this.onGround = null;
+  this.canDoubleJump = null;
+  this.doubleJumpUsed = null;
 
   Phaser.Sprite.call(this, game, x, y, 'player');
   this.anchor.setTo(0.5, 0.5);
@@ -29,9 +31,21 @@ Player.prototype.update = function () {
     this.body.velocity.x = 0;
   }
 
-  if (this.onGround && this.controls.up.isDown) {
-    this.body.velocity.y -= 500;
-    this.onGround = false;
+  if (this.controls.up.isDown) {
+    if (this.onGround) {
+      this.body.velocity.y =-500;
+      this.onGround = false;
+      this.doubleJumpUsed = false;
+      this.canDoubleJump = false;
+    } else if (!this.doubleJumpUsed && this.canDoubleJump)  {
+      this.body.velocity.y = -600;
+      this.canDoubleJump = false;
+      this.doubleJumpUsed = true;
+    }
+  } else if (this.controls.up.isUp) {
+    if (!this.onGround) {
+      this.canDoubleJump = true;
+    }
   }
 };
 
