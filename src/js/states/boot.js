@@ -4,8 +4,6 @@
 
 var Boot = function () {};
 
-module.exports = Boot;
-
 Boot.prototype = {
 
   preload: function () {
@@ -31,3 +29,5 @@ Boot.prototype = {
     this.game.state.start('Preloader');
   }
 };
+
+module.exports = Boot;

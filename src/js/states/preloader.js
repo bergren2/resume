@@ -6,8 +6,6 @@ var Preloader = function (game) {
   this.ready = false;
 };
 
-module.exports = Preloader;
-
 Preloader.prototype = {
   preload: function () {
     this.asset = this.add.sprite(320, 240, 'preloader');
@@ -33,3 +31,5 @@ Preloader.prototype = {
     this.ready = true;
   }
 };
+
+module.exports = Preloader;

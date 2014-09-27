@@ -10,8 +10,6 @@ var Game = function () {
   this.player = null;
 };
 
-module.exports = Game;
-
 Game.prototype = {
   create: function () {
     this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -33,3 +31,5 @@ Game.prototype = {
     this.game.state.start('Menu');
   }
 };
+
+module.exports = Game;

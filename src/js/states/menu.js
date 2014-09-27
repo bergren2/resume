@@ -6,8 +6,6 @@ var Menu = function () {
   this.text = null;
 };
 
-module.exports = Menu;
-
 Menu.prototype = {
 
   create: function () {
@@ -28,3 +26,5 @@ Menu.prototype = {
     this.game.state.start(playerState.currentLevel);
   }
 };
+
+module.exports = Menu;
